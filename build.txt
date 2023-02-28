@@ -1,0 +1,3 @@
+displayName = TemplateMod
+author = Chiaki
+version = 0.1
