@@ -130,8 +130,10 @@ namespace TemplateMod.Content.Items.Weapons
 
             // 决定枪射出点什么和射出的速度的量
             // 这里我让枪射出子弹，并且以 （7像素 / 帧） 的速度射出去
-            Item.shoot = ProjectileID.TerraBeam;
-            Item.shootSpeed = 7f;
+            //Item.shoot = ModContent.ProjectileType<Content.Projectiles.TestProjectile>();
+            Item.shoot = ProjectileID.PurificationPowder;
+            Item.shootSpeed = 100f;
+            Item.useAmmo = AmmoID.Bullet;
 
             // 选择这个枪射出（的时候消耗什么作为弹药，这里选择子弹
             // 你也可以删（或者注释）掉这一句，这样枪就什么都不消耗了
