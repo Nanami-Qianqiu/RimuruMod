@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using TemplateMod.Content.IDs;
 using Microsoft.Xna.Framework;
+using Terraria.DataStructures;
 
 namespace TemplateMod.Content.Projectiles
 {
@@ -18,7 +19,7 @@ namespace TemplateMod.Content.Projectiles
         {
             Projectile.width = 12; // The width of projectile hitbox
             Projectile.height = 12; // The height of projectile hitbox
-            Projectile.scale = 1.5f;
+            Projectile.scale = 1f;
             Projectile.aiStyle = -1; // The ai style of the projectile, please reference the source code of Terraria
             Projectile.friendly = true; // Can the projectile deal damage to enemies?
             Projectile.hostile = false; // Can the projectile deal damage to the player?
@@ -40,8 +41,11 @@ namespace TemplateMod.Content.Projectiles
             // 粒子特效不受重力
             dust.noGravity = true;
             Projectile.rotation = Projectile.velocity.ToRotation(); // projectile faces sprite right
-        }   
+        }
 
-
+        public override void OnSpawn(IEntitySource source)
+        {
+            Projectile.position += new Vector2(-4f, 4f);
+        }
     }
 }
