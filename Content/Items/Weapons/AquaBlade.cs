@@ -45,8 +45,8 @@ namespace TemplateMod.Content.Items.Weapons
             // 这个数值越低越快，因为TR游戏速度每秒是60帧，这里的20就是
             // 20.0 / 60.0 = 0.333 秒挥动一次！也就是一秒三次
             // 一般来说我们要把这两个值设成一样，但也有例外的时候，我们以后会讲
-            Item.useTime = 10;
-            Item.useAnimation = 10;
+            Item.useTime = 30;
+            Item.useAnimation = 30;
 
             // 使用方式，这个值决定了武器使用时到底是按什么样的动画播放
             // 0 或 None 代表......字面意思，就是啥都没有！你写了之后甚至无法使用！
@@ -91,9 +91,9 @@ namespace TemplateMod.Content.Items.Weapons
             Item.UseSound = SoundID.Item87; //95 84 109 87
 
             // 射出泰拉剑气
-            Item.shoot = ModContent.ProjectileType<Content.Projectiles.AquaBladeProjectile>();
+            Item.shoot = ModContent.ProjectileType<Projectiles.AquaBladeProjectile>();
             //这里是剑气的飞行速度，这里的意思是以 （7像素 / 帧） 的速度射出去
-            Item.shootSpeed = 15f;
+            Item.shootSpeed = 17f;
 
             // 决定了这个武器鼠标按住不放能不能一直攻击， true代表可以, false代表不行
             // （鼠标别按废了
